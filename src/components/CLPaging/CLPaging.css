@@ -1,0 +1,31 @@
+div, span{
+  margin: 0;
+  padding: 0;
+}
+
+.paging-wrap{
+  min-width: 800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+span{
+  display: inline-block;
+  text-align: center;
+  padding: 8px 12px;
+  border: 1px solid #e2e2e2;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #0080ff;
+}
+
+span.disabled{
+  color: #e2e2e2;
+  cursor: not-allowed;
+}
+
+span.active{
+  color: red !important;
+}
