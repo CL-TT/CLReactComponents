@@ -1,7 +1,7 @@
 /*
  * @Author: CL
  * @Date: 2020-11-26 17:26:26
- * @LastEditTime: 2020-11-27 09:00:49
+ * @LastEditTime: 2020-12-01 09:18:36
  * @Description: 分页组件
  * @props:参数 {
  *   1. currentPage: 当前页
@@ -14,7 +14,26 @@
  */
 
 import React from 'react';
+import propTypes from 'prop-types';
+
 import './CLPaging.css';
+
+//属性默认值
+CLPaging.defaultProps = {
+  currentPage: 1,
+  pageSize: 5,
+  showPage: 5,
+  color: '#762'
+}
+
+//属性验证值
+CLPaging.propTypes = {
+  currentPage: propTypes.number.isRequired,
+  totalSize: propTypes.number.isRequired,
+  pageSize: propTypes.number,
+  showPage: propTypes.number,
+  color: propTypes.string
+}
 
 export default function CLPaging(props) {
   const totalPage = getTotalPage(props);
